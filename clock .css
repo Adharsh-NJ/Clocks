@@ -11,6 +11,7 @@ body{
     justify-content: space-around;
     background-color: rgb(5, 23, 61);
     min-height: 100vh;
+    flex-wrap: wrap;
 }
 
 .clock{
