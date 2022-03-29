@@ -19,15 +19,14 @@ let digiClk = document.querySelector("#time")
 
 function time() {
     let date = new Date()
-    let hours = date.getHours()
-    let mins = date.getMinutes()
-    let secs = date.getSeconds()
+    let hours = date.getHours()<10?`0${date.getHours()}`:date.getHours()
+    let mins = date.getMinutes()<10?`0${date.getMinutes()}`:date.getMinutes()
+    let secs = date.getSeconds()<10?`0${date.getSeconds()}`:date.getSeconds()
     if (hours > 12) {
         digiClk.innerHTML = `${hours - 12}:${mins}:${secs} pm`
     } else {
         digiClk.innerHTML = `${hours}:${mins}:${secs} AM`
     }
-
 }
 
 setInterval(time, 1000)
